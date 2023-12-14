@@ -34,14 +34,14 @@ namespace DAL.Repository.Implementations
             return set.Where(predicate).ToList();
         }
 
-        public T GetById(int id)
+        public T Get(int id)
         {
             return set.Find(id);
         }
 
         public void Delete(int id)
         {
-            var entity = GetById(id);
+            var entity = Get(id);
             set.Remove(entity);
         }
         public void Update(T item)

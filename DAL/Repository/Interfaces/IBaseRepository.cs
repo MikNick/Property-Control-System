@@ -10,7 +10,7 @@ namespace DAL.Repository.Interfaces
     public interface IBaseRepository<T>
     {
         List<T> GetAll();
-        T GetById(int id);
+        T Get(int id);
         List<T> Find(Func<T, bool> predicate);
         void Delete(int id);
         void Update(T entity);
