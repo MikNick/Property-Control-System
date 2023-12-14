@@ -115,5 +115,42 @@ namespace DAL.TESTS
             mockFurnitureDbSet.Verify(
                 dbSet => dbSet.Remove(expectedFurniture), Times.Once());
         }
+
+        [Fact]
+        public void Update_InputFurniture_CallEntryMethodOfDbContextWithInputFurniture()
+        {
+            //Arrange
+            DbContextOptions opt = new DbContextOptionsBuilder<PCSContext>().Options;
+            var mockContext = new Mock<PCSContext>(opt);
+            var mockFurnitureDbSet = new Mock<DbSet<Furniture>>();
+
+            var mockEntityEntry = new Mock<EntityEntry<Furniture>>(null);
+
+            Furniture expectedFurniture = new Furniture()
+            {
+                Id = 2,
+                Name = "Стіл дубовий",
+                category = FurnitureCategory.Table
+            };
+
+            //налаштовуємо проперті Set<Furniture>, dbCotnext'у так,
+            //щоб при виклику він повертав об'єкт моку mockFurnitureDbSet
+            mockContext
+               .Setup(context => context.Entry(expectedFurniture)).Returns(mockEntityEntry.Object);
+
+            mockEntityEntry
+                .Setup(entry => entry.State).Returns(new EntityState());
+
+            TestFurnitureRepository repository = new TestFurnitureRepository(mockContext.Object);
+
+            //Act
+            repository.Update(expectedFurniture);
+
+            //Assert
+            //перевіряємо, що метод Entry, context'у був викликаний з параметром expectedFurniture один раз
+            mockContext.Verify(
+                context => context.Entry(expectedFurniture), Times.Once
+                );
+        }
     }
 }
