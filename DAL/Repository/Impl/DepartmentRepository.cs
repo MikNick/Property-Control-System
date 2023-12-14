@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.Impl
 {
-    public class DepratmnetRepository : BaseRepository<Depratment>, IDepartmentRepository
+    public class DepartmentRepository : BaseRepository<Depratment>, IDepartmentRepository
     {
-        public DepratmnetRepository(DbContext context) : base(context)
+        public DepartmentRepository(DbContext context) : base(context)
         {
         }
     }
