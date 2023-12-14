@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB", "Property Control System\WEB.csproj", "{74ABA2AF-676F-4CDC-919B-6FABC140384E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB", "Property Control System\WEB.csproj", "{74ABA2AF-676F-4CDC-919B-6FABC140384E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{3678FFB2-A28D-440C-B921-683C28B4F487}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{3678FFB2-A28D-440C-B921-683C28B4F487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.TESTS", "DAL.TESTS\DAL.TESTS.csproj", "{C47922A4-40ED-463F-95DA-0EA90615D06D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3678FFB2-A28D-440C-B921-683C28B4F487}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3678FFB2-A28D-440C-B921-683C28B4F487}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3678FFB2-A28D-440C-B921-683C28B4F487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47922A4-40ED-463F-95DA-0EA90615D06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47922A4-40ED-463F-95DA-0EA90615D06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47922A4-40ED-463F-95DA-0EA90615D06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47922A4-40ED-463F-95DA-0EA90615D06D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
