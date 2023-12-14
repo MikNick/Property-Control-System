@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.Interfaces
 {
-    public interface IDepartmentRepository : IBaseRepository<Depratment>
+    public interface IDepartmentRepository : IBaseRepository<Department>
     {
     }
 }

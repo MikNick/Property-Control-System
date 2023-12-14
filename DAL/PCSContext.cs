@@ -10,7 +10,7 @@ namespace DAL
 {
     public class PCSContext : DbContext
     {
-        public DbSet<Depratment> Departments { get; set; }
+        public DbSet<Department> Departments { get; set; }
         public DbSet<Office> Offices { get; set; }
         public DbSet<Furniture> Furnitures { get; set; }
         public DbSet<Documentary> Documentary{ get; set; }

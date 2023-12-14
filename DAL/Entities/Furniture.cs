@@ -12,6 +12,9 @@ namespace DAL.Entities
         public string Name { get; set; }
         public FurnitureCategory category { get; set; }
         public Documentary documentary { get; set; }
+        public int documentary_id { get; set; }
+        public Office office { get; set; }
+        public int office_id { get; set; }
 
     }
 
