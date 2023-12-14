@@ -52,6 +52,10 @@ namespace BLL.Services.Impl
                 throw new MethodAccessException();
             }
 
+            var office = _database.OfficeRepository.Get(officeId);
+
+            if (office == null) return null;
+
             var furnitures = _database.FurnitureRepository
                 .Find(f => f.office_id == officeId);
 
